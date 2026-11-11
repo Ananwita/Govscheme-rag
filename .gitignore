@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+index/*
+!index/.gitkeep
+data/schemes/uploads/
+.streamlit/secrets.toml
+*.mp4

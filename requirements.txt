@@ -1,0 +1,12 @@
+# Core
+numpy>=1.24
+scikit-learn>=1.3        # TF-IDF fallback embedder
+pypdf>=4.0               # read official scheme PDFs
+requests>=2.31           # optional LLM calls (Ollama / Groq / OpenAI-compatible)
+matplotlib>=3.7          # evaluation chart + pipeline diagram
+
+# Multilingual embeddings (Hugging Face). Pulls in PyTorch (~200 MB CPU build).
+sentence-transformers>=3.0
+
+# Web app
+streamlit>=1.36
