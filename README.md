@@ -7,7 +7,7 @@ embeddings**, and returns **cited eligibility information**.
 > Experiential Learning Assignment — Task 11: *Multilingual RAG for Government Schemes*
 > Course: Language Processing Using Machine Learning and LLMs
 
-![pipeline](pipeline_diagram.png)
+![pipeline](docs/pipeline_diagram.png)
 
 ---
 
