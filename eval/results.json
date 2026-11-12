@@ -1,0 +1,1384 @@
+{
+ "embedder": "sentence-transformers:intfloat/multilingual-e5-small",
+ "results": {
+  "hybrid": {
+   "all": {
+    "n": 44,
+    "Hit@1": 0.955,
+    "Hit@3": 1.0,
+    "MRR": 0.977,
+    "Section@1": 0.864,
+    "FactRecall": 0.909
+   },
+   "en": {
+    "n": 22,
+    "Hit@1": 1.0,
+    "Hit@3": 1.0,
+    "MRR": 1.0,
+    "Section@1": 0.955,
+    "FactRecall": 0.955
+   },
+   "hi": {
+    "n": 22,
+    "Hit@1": 0.909,
+    "Hit@3": 1.0,
+    "MRR": 0.955,
+    "Section@1": 0.773,
+    "FactRecall": 0.864
+   },
+   "rows": [
+    {
+     "id": "en01",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en02",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en03",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Exclusions",
+     "fact_ok": true
+    },
+    {
+     "id": "en04",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en05",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en06",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en07",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en08",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en09",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/Eligibility",
+     "fact_ok": false
+    },
+    {
+     "id": "en10",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en11",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en12",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en13",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en14",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en15",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en16",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en17",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en18",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Eligibility",
+     "fact_ok": true
+    },
+    {
+     "id": "en19",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en20",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/Benefits",
+     "fact_ok": true
+    },
+    {
+     "id": "en21",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Documents Required",
+     "fact_ok": true
+    },
+    {
+     "id": "en22",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/How to Apply",
+     "fact_ok": true
+    },
+    {
+     "id": "hi01",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi02",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi03",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)",
+     "fact_ok": true
+    },
+    {
+     "id": "hi04",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi05",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pmjjby_pmsby/पीएमएसबीवाई की पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi06",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi07",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi08",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi09",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/निकासी और परिपक्वता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi10",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi11",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi12",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई के लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi13",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई की पात्रता",
+     "fact_ok": true
+    },
+    {
+     "id": "hi14",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/ऋण श्रेणियां और लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi15",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/आवेदन कैसे करें",
+     "fact_ok": true
+    },
+    {
+     "id": "hi16",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi17",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/आवेदन कैसे करें",
+     "fact_ok": true
+    },
+    {
+     "id": "hi18",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)",
+     "fact_ok": false
+    },
+    {
+     "id": "hi19",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi20",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/लाभ",
+     "fact_ok": true
+    },
+    {
+     "id": "hi21",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_ujjwala/पात्रता",
+     "fact_ok": false
+    },
+    {
+     "id": "hi22",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता",
+     "fact_ok": false
+    }
+   ]
+  },
+  "dense_only": {
+   "all": {
+    "n": 44,
+    "Hit@1": 0.955,
+    "Hit@3": 0.977,
+    "MRR": 0.97,
+    "Section@1": 0.841
+   },
+   "en": {
+    "n": 22,
+    "Hit@1": 0.955,
+    "Hit@3": 1.0,
+    "MRR": 0.977,
+    "Section@1": 0.864
+   },
+   "hi": {
+    "n": 22,
+    "Hit@1": 0.955,
+    "Hit@3": 0.955,
+    "MRR": 0.964,
+    "Section@1": 0.818
+   },
+   "rows": [
+    {
+     "id": "en01",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Exclusions"
+    },
+    {
+     "id": "en02",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Benefits"
+    },
+    {
+     "id": "en03",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Exclusions"
+    },
+    {
+     "id": "en04",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Benefits"
+    },
+    {
+     "id": "en05",
+     "lang": "en",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_kisan/Exclusions"
+    },
+    {
+     "id": "en06",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Eligibility"
+    },
+    {
+     "id": "en07",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Benefits"
+    },
+    {
+     "id": "en08",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "en09",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "en10",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Eligibility"
+    },
+    {
+     "id": "en11",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Benefits"
+    },
+    {
+     "id": "en12",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Benefits"
+    },
+    {
+     "id": "en13",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Eligibility"
+    },
+    {
+     "id": "en14",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits"
+    },
+    {
+     "id": "en15",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits"
+    },
+    {
+     "id": "en16",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits"
+    },
+    {
+     "id": "en17",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits"
+    },
+    {
+     "id": "en18",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Eligibility"
+    },
+    {
+     "id": "en19",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_vishwakarma/Overview"
+    },
+    {
+     "id": "en20",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/Benefits"
+    },
+    {
+     "id": "en21",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Documents Required"
+    },
+    {
+     "id": "en22",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/How to Apply"
+    },
+    {
+     "id": "hi01",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)"
+    },
+    {
+     "id": "hi02",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/लाभ"
+    },
+    {
+     "id": "hi03",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)"
+    },
+    {
+     "id": "hi04",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    },
+    {
+     "id": "hi05",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    },
+    {
+     "id": "hi06",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/पात्रता"
+    },
+    {
+     "id": "hi07",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/लाभ"
+    },
+    {
+     "id": "hi08",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/पात्रता"
+    },
+    {
+     "id": "hi09",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/निकासी और परिपक्वता"
+    },
+    {
+     "id": "hi10",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/पात्रता"
+    },
+    {
+     "id": "hi11",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/लाभ"
+    },
+    {
+     "id": "hi12",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई के लाभ"
+    },
+    {
+     "id": "hi13",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई की पात्रता"
+    },
+    {
+     "id": "hi14",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/ऋण श्रेणियां और लाभ"
+    },
+    {
+     "id": "hi15",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi16",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/लाभ"
+    },
+    {
+     "id": "hi17",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi18",
+     "lang": "hi",
+     "rank": 5,
+     "section_ok": false,
+     "top1": "pm_mudra/पात्रता"
+    },
+    {
+     "id": "hi19",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/लाभ"
+    },
+    {
+     "id": "hi20",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/लाभ"
+    },
+    {
+     "id": "hi21",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_ujjwala/पात्रता"
+    },
+    {
+     "id": "hi22",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    }
+   ]
+  },
+  "bm25_only": {
+   "all": {
+    "n": 44,
+    "Hit@1": 0.864,
+    "Hit@3": 1.0,
+    "MRR": 0.924,
+    "Section@1": 0.75
+   },
+   "en": {
+    "n": 22,
+    "Hit@1": 0.909,
+    "Hit@3": 1.0,
+    "MRR": 0.955,
+    "Section@1": 0.818
+   },
+   "hi": {
+    "n": 22,
+    "Hit@1": 0.818,
+    "Hit@3": 1.0,
+    "MRR": 0.894,
+    "Section@1": 0.682
+   },
+   "rows": [
+    {
+     "id": "en01",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Eligibility"
+    },
+    {
+     "id": "en02",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Benefits"
+    },
+    {
+     "id": "en03",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Exclusions"
+    },
+    {
+     "id": "en04",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Benefits"
+    },
+    {
+     "id": "en05",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    },
+    {
+     "id": "en06",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Eligibility"
+    },
+    {
+     "id": "en07",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Benefits"
+    },
+    {
+     "id": "en08",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "en09",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "en10",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Eligibility"
+    },
+    {
+     "id": "en11",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Benefits"
+    },
+    {
+     "id": "en12",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Benefits"
+    },
+    {
+     "id": "en13",
+     "lang": "en",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_mudra/Eligibility"
+    },
+    {
+     "id": "en14",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits"
+    },
+    {
+     "id": "en15",
+     "lang": "en",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/Benefits"
+    },
+    {
+     "id": "en16",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits"
+    },
+    {
+     "id": "en17",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits"
+    },
+    {
+     "id": "en18",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Eligibility"
+    },
+    {
+     "id": "en19",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Benefits"
+    },
+    {
+     "id": "en20",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/Benefits"
+    },
+    {
+     "id": "en21",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_kisan/How to Apply"
+    },
+    {
+     "id": "en22",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/How to Apply"
+    },
+    {
+     "id": "hi01",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/पात्रता"
+    },
+    {
+     "id": "hi02",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/लाभ"
+    },
+    {
+     "id": "hi03",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)"
+    },
+    {
+     "id": "hi04",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pmjjby_pmsby/पीएमएसबीवाई की पात्रता"
+    },
+    {
+     "id": "hi05",
+     "lang": "hi",
+     "rank": 3,
+     "section_ok": false,
+     "top1": "pmjjby_pmsby/पीएमएसबीवाई की पात्रता"
+    },
+    {
+     "id": "hi06",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_ujjwala/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi07",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/लाभ"
+    },
+    {
+     "id": "hi08",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/पात्रता"
+    },
+    {
+     "id": "hi09",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/निकासी और परिपक्वता"
+    },
+    {
+     "id": "hi10",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/पात्रता"
+    },
+    {
+     "id": "hi11",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/लाभ"
+    },
+    {
+     "id": "hi12",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई के लाभ"
+    },
+    {
+     "id": "hi13",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमएसबीवाई की पात्रता"
+    },
+    {
+     "id": "hi14",
+     "lang": "hi",
+     "rank": 3,
+     "section_ok": false,
+     "top1": "pm_vishwakarma/लाभ"
+    },
+    {
+     "id": "hi15",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi16",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/लाभ"
+    },
+    {
+     "id": "hi17",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi18",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_kisan/पात्रता"
+    },
+    {
+     "id": "hi19",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/लाभ"
+    },
+    {
+     "id": "hi20",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/लाभ"
+    },
+    {
+     "id": "hi21",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_ujjwala/पात्रता"
+    },
+    {
+     "id": "hi22",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    }
+   ]
+  },
+  "cross_lingual": {
+   "all": {
+    "n": 44,
+    "Hit@1": 0.864,
+    "Hit@3": 0.955,
+    "MRR": 0.919,
+    "Section@1": 0.727
+   },
+   "en": {
+    "n": 22,
+    "Hit@1": 0.955,
+    "Hit@3": 1.0,
+    "MRR": 0.977,
+    "Section@1": 0.818
+   },
+   "hi": {
+    "n": 22,
+    "Hit@1": 0.773,
+    "Hit@3": 0.909,
+    "MRR": 0.861,
+    "Section@1": 0.636
+   },
+   "rows": [
+    {
+     "id": "en01",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)"
+    },
+    {
+     "id": "en02",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/लाभ"
+    },
+    {
+     "id": "en03",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/अपात्रता (कौन पात्र नहीं है)"
+    },
+    {
+     "id": "en04",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/लाभ"
+    },
+    {
+     "id": "en05",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    },
+    {
+     "id": "en06",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/पात्रता"
+    },
+    {
+     "id": "en07",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/लाभ"
+    },
+    {
+     "id": "en08",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/पात्रता"
+    },
+    {
+     "id": "en09",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/पात्रता"
+    },
+    {
+     "id": "en10",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/पात्रता"
+    },
+    {
+     "id": "en11",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/लाभ"
+    },
+    {
+     "id": "en12",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/पीएमजेजेबीवाई के लाभ"
+    },
+    {
+     "id": "en13",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pmjjby_pmsby/पीएमएसबीवाई के लाभ"
+    },
+    {
+     "id": "en14",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/ऋण श्रेणियां और लाभ"
+    },
+    {
+     "id": "en15",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/ऋण श्रेणियां और लाभ"
+    },
+    {
+     "id": "en16",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/लाभ"
+    },
+    {
+     "id": "en17",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/लाभ"
+    },
+    {
+     "id": "en18",
+     "lang": "en",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/पात्रता"
+    },
+    {
+     "id": "en19",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "pm_vishwakarma/परिचय"
+    },
+    {
+     "id": "en20",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/लाभ"
+    },
+    {
+     "id": "en21",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/आवश्यक दस्तावेज"
+    },
+    {
+     "id": "en22",
+     "lang": "en",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/आवेदन कैसे करें"
+    },
+    {
+     "id": "hi01",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_mudra/Eligibility"
+    },
+    {
+     "id": "hi02",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_kisan/Benefits"
+    },
+    {
+     "id": "hi03",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "pm_mudra/Eligibility"
+    },
+    {
+     "id": "hi04",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    },
+    {
+     "id": "hi05",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    },
+    {
+     "id": "hi06",
+     "lang": "hi",
+     "rank": 4,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    },
+    {
+     "id": "hi07",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_ujjwala/Benefits"
+    },
+    {
+     "id": "hi08",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "hi09",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "sukanya_samriddhi/Eligibility"
+    },
+    {
+     "id": "hi10",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Eligibility"
+    },
+    {
+     "id": "hi11",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "atal_pension/Benefits"
+    },
+    {
+     "id": "hi12",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Benefits"
+    },
+    {
+     "id": "hi13",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmjjby_pmsby/PMJJBY Eligibility"
+    },
+    {
+     "id": "hi14",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/Loan Categories and Benefits"
+    },
+    {
+     "id": "hi15",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_mudra/How to Apply"
+    },
+    {
+     "id": "hi16",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/Benefits"
+    },
+    {
+     "id": "hi17",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "mgnrega/How to Apply"
+    },
+    {
+     "id": "hi18",
+     "lang": "hi",
+     "rank": 5,
+     "section_ok": false,
+     "top1": "pm_mudra/Eligibility"
+    },
+    {
+     "id": "hi19",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pm_vishwakarma/Benefits"
+    },
+    {
+     "id": "hi20",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": true,
+     "top1": "pmay_gramin/Benefits"
+    },
+    {
+     "id": "hi21",
+     "lang": "hi",
+     "rank": 2,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    },
+    {
+     "id": "hi22",
+     "lang": "hi",
+     "rank": 1,
+     "section_ok": false,
+     "top1": "ayushman_bharat_pmjay/Eligibility"
+    }
+   ]
+  }
+ }
+}
