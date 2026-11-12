@@ -6,6 +6,13 @@ embeddings**, and returns **cited eligibility information**.
 
 > Experiential Learning Assignment — Task 11: *Multilingual RAG for Government Schemes*
 > Course: Language Processing Using Machine Learning and LLMs
+> Group 11 · Aakashdeep Paul · Ananwita Dash · Palak Sengar · Sneha Singh
+
+## 🎥 Demo Video
+
+▶️ **[Watch the demonstration video](https://drive.google.com/file/d/1mvV1kWomDNoK_1pIeqMphC709dSD5Eci/view)**
+
+📦 **GitHub repository:** https://github.com/Ananwita/Govscheme-rag
 
 ![pipeline](docs/pipeline_diagram.png)
 
@@ -20,7 +27,7 @@ embeddings**, and returns **cited eligibility information**.
 | Hybrid retrieval | Dense cosine similarity + BM25 keyword search, fused with weighted Reciprocal Rank Fusion |
 | Smart re-ranking | Same-language boost + section-intent boost (an "eligibility" question prefers *Eligibility / Exclusions* sections) |
 | Cited answers | Every answer carries `[n]` citations to the scheme, section and official source URL |
-| LLM generation | Groq / Google Gemini (free API key) or Ollama (local) writes the cited answer from the retrieved passages; offline extractive answerer as fallback |
+| LLM generation | OpenAI `gpt-oss-120b` via Groq (free API key) writes the cited answer from the retrieved passages; Gemini / Ollama also supported; offline extractive answerer as fallback |
 | Eligibility checker | Fill a profile → see likely/maybe/not-eligible schemes with the cited eligibility text |
 | Add your own docs | Upload official PDFs in the app → index is rebuilt automatically |
 | Evaluation | 44 labelled EN + HI questions → Hit@1, Hit@3, MRR, Section@1, FactRecall, ablation + cross-lingual test |
@@ -42,7 +49,7 @@ govscheme-rag/
 ├── make_samples.py        # Generates sample inputs/outputs for the report
 ├── make_diagram.py        # Draws docs/pipeline_diagram.png
 ├── requirements.txt
-├── .env.example           # Optional settings (model, LLM)
+├── .env.example           # Settings template (embedding model, LLM) - copy to .env
 ├── src/
 │   ├── config.py          # All settings
 │   ├── ingest.py          # Load .md/.pdf/.txt + section-aware chunking
@@ -59,7 +66,9 @@ govscheme-rag/
 │   └── hi/*.md            # Hindi scheme documents
 ├── eval/questions.json    # 22 English + 22 Hindi labelled questions
 ├── samples/sample_queries.txt
-├── docs/pipeline_diagram.png, PRESENTATION_GUIDE.md
+├── docs/
+│   ├── pipeline_diagram.png   # Processing pipeline block diagram
+│   └── CONTRIBUTIONS.md       # Group details and contributions
 ├── index/                 # generated: embeddings.npy, chunks.json, meta.json
 └── .vscode/               # launch configs (one-click run), tasks, settings
 ```
@@ -70,7 +79,12 @@ govscheme-rag/
 
 **Requirements:** Python 3.10 – 3.12 recommended, ~1.5 GB free disk (PyTorch + model), internet for the first run.
 
-1. Unzip the project and open the folder in VS Code (**File → Open Folder…**). Install the recommended *Python* extension when prompted.
+1. Download the project and open the folder in VS Code (**File → Open Folder…**). Install the recommended *Python* extension when prompted.
+   ```bash
+   git clone https://github.com/Ananwita/Govscheme-rag.git
+   cd Govscheme-rag
+   ```
+   (or **Code → Download ZIP** on GitHub and unzip it)
 2. Open a terminal (**Terminal → New Terminal**) and create a virtual environment:
 
    **Windows (PowerShell)**
@@ -114,20 +128,33 @@ python make_samples.py                         # answers -> samples/sample_outpu
 
 ---
 
-## 🤖 LLM generation step (Groq / Gemini / Ollama)
+## 🤖 LLM generation step (OpenAI gpt-oss-120b via Groq)
 
 In RAG, the last step is an LLM that writes the answer from the retrieved passages. The LLM gets
 ONLY the top-k passages and is instructed to answer from them alone, in the user's language, with
 `[n]` citations. If no LLM is connected (or it is unreachable), an offline extractive answerer is used.
 
-**Connect it from the app (easiest):**
-1. Get a free API key from **Groq** (https://console.groq.com/keys) or **Google Gemini** (https://aistudio.google.com/apikey).
-2. In the app sidebar open **🤖 LLM (generation step) → Connect an LLM**, choose the provider, paste the key, click **Connect**.
-3. Keep *Remember on this computer* ticked to save it to `.env` (`.env` is git-ignored, so the key is never uploaded).
+This project uses OpenAI's open-weight model **`openai/gpt-oss-120b`**, served free through the **Groq API**.
 
-**Or locally with Ollama:** install from https://ollama.com, run `ollama pull qwen2.5:3b`, and pick *Ollama (local)*.
+**Option A — from the app (easiest):**
+1. Get a free API key from **Groq**: https://console.groq.com/keys
+2. In the app sidebar open **🤖 LLM (generation step) → Connect an LLM**, choose **Groq**, paste the key,
+   set **Model** to `openai/gpt-oss-120b`, and click **Connect**.
+3. Keep *Remember on this computer* ticked; the settings are saved to `.env`.
 
-If the chosen model is not offered by the provider, the app automatically picks a similar available one.
+**Option B — with a `.env` file:** copy `.env.example` to `.env` in the project folder and fill in your key:
+```
+LLM_BASE_URL=https://api.groq.com/openai/v1
+LLM_MODEL=openai/gpt-oss-120b
+LLM_API_KEY=your_groq_api_key_here
+```
+Then restart the app. The LLM connects automatically every time.
+
+> 🔒 `.env` is listed in `.gitignore`, so your API key is never uploaded. Never put a real key in code or in `.env.example`.
+
+**Other providers:** Google Gemini (free key from https://aistudio.google.com/apikey) or Ollama running
+locally (`ollama pull qwen2.5:3b`). See `.env.example`. If the chosen model is not offered by the
+provider, the app automatically picks a similar available one.
 
 ---
 
@@ -138,8 +165,8 @@ If the chosen model is not offered by the provider, the app automatically picks 
 | Multilingual embeddings | `intfloat/multilingual-e5-small` (118M params, 384-dim) | https://huggingface.co/intfloat/multilingual-e5-small |
 | Alternative embeddings | `paraphrase-multilingual-MiniLM-L12-v2`, `BAAI/bge-m3` | https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 · https://huggingface.co/BAAI/bge-m3 |
 | Keyword retrieval | Okapi BM25 (own NumPy implementation) | — |
-| Generation LLM | Llama-3.3-70B-Versatile via Groq · Gemini 2.5 Flash · Qwen2.5-3B via Ollama | https://console.groq.com · https://aistudio.google.com · https://ollama.com/library/qwen2.5 |
-| Framework | sentence-transformers, PyTorch, NumPy, scikit-learn, pypdf, Streamlit, Matplotlib | — |
+| Generation LLM | **OpenAI gpt-oss-120b via Groq** (used) · alternatives: gpt-oss-20b, Llama-3.3-70B (Groq), Gemini 2.5 Flash, Qwen2.5-3B (Ollama) | https://console.groq.com · https://aistudio.google.com · https://ollama.com/library/qwen2.5 |
+| Framework | sentence-transformers, PyTorch, NumPy, scikit-learn, pypdf, Streamlit, requests, Matplotlib | — |
 
 Change the embedding model with `EMBEDDING_MODEL=` in `.env`, then rerun `python build_index.py`.
 
@@ -184,7 +211,8 @@ in the app's *How it works* tab.
 
 * The corpus is a curated summary of 10 central schemes from official portals; benefit amounts and
   rules change, so answers always carry a "verify on the official portal" note.
-* Extractive mode returns whole sections — accurate but not a personalised yes/no answer.
+* LLM generation needs internet access and an API key; without it, the extractive fallback returns whole
+  sections rather than a personalised yes/no answer. Cited source passages are always shown beside the answer.
 * The eligibility checker uses simplified rules and is a screening aid, not an official decision.
 * Hindi in Roman script ("Hinglish") is handled only partially (BM25 on English tokens + embeddings).
 * Scanned (image-only) PDFs need OCR before indexing.
@@ -196,15 +224,26 @@ Hugging Face Spaces.
 
 ---
 
-## 👥 Team and contributions
-See [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
+## 👥 Team and contributions (Group 11)
+
+| Name | Roll No. | Contribution |
+|---|---|---|
+| Aakashdeep Paul | 2330055 | Data collection: English and Hindi scheme documents, metadata and source verification; labelled evaluation questions |
+| Ananwita Dash | 2330067 | Ingestion and section-aware chunking, multilingual embeddings, BM25 and hybrid retriever |
+| Palak Sengar | 2330097 | Cited answer generation (extractive and LLM), language and intent detection, eligibility checker |
+| Sneha Singh | 2330120 | Streamlit web application, evaluation script, project report, slides and demonstration video |
+
+Details: [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md)
 
 ## 📚 References
 1. Wang et al., *Multilingual E5 Text Embeddings: A Technical Report*, 2024. https://arxiv.org/abs/2402.05672
 2. Lewis et al., *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*, NeurIPS 2020.
 3. Robertson & Zaragoza, *The Probabilistic Relevance Framework: BM25 and Beyond*, 2009.
 4. Cormack et al., *Reciprocal Rank Fusion outperforms Condorcet and individual rank learning methods*, SIGIR 2009.
-5. Official scheme portals: pmkisan.gov.in · nha.gov.in/PM-JAY · pmuy.gov.in · indiapost.gov.in · npscra.nsdl.co.in ·
+5. OpenAI, *gpt-oss-120b* open-weight model, served via Groq: https://console.groq.com/docs/models
+6. Official scheme portals: pmkisan.gov.in · nha.gov.in/PM-JAY · pmuy.gov.in · indiapost.gov.in · npscra.nsdl.co.in ·
    jansuraksha.gov.in · mudra.org.in · nrega.nic.in · pmvishwakarma.gov.in · pmayg.nic.in · myscheme.gov.in
 
-**GitHub repository:** `https://github.com/<your-username>/govscheme-rag`
+**GitHub repository:** https://github.com/Ananwita/Govscheme-rag
+
+**Demo video:** https://drive.google.com/file/d/1mvV1kWomDNoK_1pIeqMphC709dSD5Eci/view
